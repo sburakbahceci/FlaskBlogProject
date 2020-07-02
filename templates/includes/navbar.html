@@ -1,0 +1,35 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded"style="background-color:#F57F17;">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="/">SBBLOG</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/about">Hakkımda</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/articles">Gönderiler</a>
+      </li>
+    </ul>
+     <ul class="navbar-nav ml-auto">
+     {% if session["logged_in"] %}
+     <li class="nav-item active">
+        <a class="nav-link" href="/dashboard">Kontrol Paneli</a>
+      </li>
+     <li class="nav-item active">
+        <a class="nav-link" href="/logout">Çıkış Yap</a>
+      </li>
+     {% else %}
+     <li class="nav-item active">
+        <a class="nav-link" href="/login">Giriş Yap</a>
+      </li>
+     {% endif %}
+
+      <li class="nav-item active">
+        <a class="nav-link" href="/register">Kayıt Ol</a>
+      </li>
+    </ul>
+  </div>
+</nav>
